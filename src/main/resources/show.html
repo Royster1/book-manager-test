@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍信息</title>
+</head>
+<body>
+
+<tbody>
+<tr th:each="book, iterStat : ${book_list}">
+    <td th:text="${book.getBookname()}">书籍名字</td>
+    <td th:text="${book.getBookprice()}">书籍单价</td>
+    <td th:text="${book.getBooknum()}">书籍数量</td>
+    <td th:text="${book.sum()}">总价</td>
+    <br>
+</tbody>
+</body>
+</html>
